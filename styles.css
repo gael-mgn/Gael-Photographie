@@ -226,3 +226,8 @@ top: 90px;
     display: flex;
   }
 }
+
+
+a {
+  color: inherit;
+}
