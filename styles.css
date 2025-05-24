@@ -204,10 +204,7 @@ margin: auto;
 
 /* Responsive menu */
 @media (max-width: 768px) {
-  .nav {
-      position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
-  }
+
   .menu-toggle {
     display: block;
   }
