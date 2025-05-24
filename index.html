@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gaël Maignan - Photo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <!-- NAVIGATION -->
+<nav class="nav">
+  <div class="logo">Gaël Maignan</div>
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#">Accueil</a></li>
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#series">Séries</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+</script>
+    <div class="hero-content">
+      <p>« La ville est en vie. »</p>
+      <p>— Gaël M.</p>
+    </div>
+  </header>
+
+
+  <section class="content" id="series">
+    <h2>Séries</h2>
+  <section class="series">
+  <div class="series-item">
+    <img src="images/urbain.jpg" alt="Urbain" />
+    <h2>Paris Bellevue</h2>
+    <p>Fragments de ville, entre solitude architecturale et poésie du béton.</p>
+
+    <div class="cta">
+    <a href="series/paris bellevue/serie.html">Voir les photos</a>
+  </div>
+  </div>
+  <div class="series-item">
+    <img src="images/vegetal.jpg" alt="Végétal" />
+    <h2>Paris sauvage</h2>
+    <p>La nature saisie dans son mystère et sa puissance fragile.</p>
+
+    <div class="cta"><a href="#">Voir les photos</a></div>
+  </div>
+</section>
+</section>
+<section class="content" id="about">
+    <h2>À propos</h2>
+    <p class="paragraphe">Je photographie la ville comme on observe un corps en mouvement. Belleville, Paris, ou ailleurs, chaque rue, chaque fissure, chaque façade raconte une histoire. Mon regard se pose sur les interstices : là où le béton respire, où la lumière casse la routine. Ingénieur urbaniste, je cherche à révéler ce que l’œil pressé ne voit plus. Mes images explorent les marges, les transitions, les détails oubliés du quotidien urbain.</p>
+  </section>
+
+
+
+  <section class="content">
+    <h2>Contact</h2>
+    <p class="paragraphe">Que ce soit pour une collaboration, une commande ou simplement échanger, je serai ravi de vous lire. Vous pouvez me joindre directement par mail à l'adresse : contact@gael-maignan.fr</p>
+
+    <div class="cta"><a href="mailto:contact@gael-maignan.fr">M'envoyer un mail</a></div>
+
+  </section>
+
+
+  <footer class="footer">
+    <a href="#">À propos</a>
+    <a href="#">Contact</a>
+    <a href="#">Instagram</a>
+    <a href="#">Mentions légales</a>
+  </footer>
+</body>
+</html>
