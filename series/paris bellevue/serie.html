@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paris Bellevue – Série photographique</title>
+  <link rel="stylesheet" href="../serie.css" />
+</head>
+<body>
+  <style>
+    .banner {
+    background: url('cover.jpg') center/cover no-repeat;
+  }
+  </style>
+  <header class="banner">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Paris Bellevue</h1>
+      <p>Un quartie, une vie.</p>
+    </div>
+  </header>
+
+  <nav class="subnav">
+    <a href="#apropos">À propos</a>
+    <a href="#galerie">Galerie</a>
+    <a href="../../index.html">Accueil</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="apropos" class="content-section">
+      <h2>À propos</h2>
+      <p>
+        Un temps, j’ai voué à Belleville une sourde aversion. Puis, à force d’y vivre, j’ai succombé à ses sortilèges. Avant de m’éloigner de son étreinte hospitalière, j’ai voulu graver son souvenir dans l’éternité.
+      </p>
+    </section>
+
+    <section id="galerie" class="content-section">
+      <h2>Galerie</h2>
+      <div class="gallery-grid">
+        <img src="images/1.jpg" alt="Portrait 1" onclick="openLightbox(this)" />
+        <img src="images/2.jpg" alt="Portrait 2" onclick="openLightbox(this)" />
+        <img src="images/3.jpg" alt="Portrait 3" onclick="openLightbox(this)"/>
+        <img src="images/4.jpg" alt="Portrait 4" onclick="openLightbox(this)"/>
+        <img src="images/5.jpg" alt="Portrait 5" onclick="openLightbox(this)"/>
+        <img src="images/6.jpg" alt="Portrait 6" onclick="openLightbox(this)"/>
+        <img src="images/7.jpg" alt="Portrait 7" onclick="openLightbox(this)"/>
+      </div>
+
+       <div class="cta"><a href="../../index.html">Retour à l'accueil</a></div>
+      
+    </section>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Image en grand" />
+</div>
+
+<script>
+  function openLightbox(img) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    lightboxImg.src = img.src;
+    lightbox.style.display = "flex";
+  }
+
+  function closeLightbox() {
+    const lightbox = document.getElementById("lightbox");
+    lightbox.style.display = "none";
+  }
+</script>
+
+    <section id="contact" class="content-section">
+      <h2>Contact</h2>
+      <p>Que ce soit pour une collaboration, une commande ou simplement échanger, je serai ravi de vous lire. Vous pouvez me joindre directement par mail à l'adresse : contact@gael-maignan.fr</p>
+
+      <div class="cta"><a href="mailto:contact@gael-maignan.fr">M'envoyer un mail</a></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gaël Maignan – Photographe</p>
+  </footer>
+</body>
+</html>
