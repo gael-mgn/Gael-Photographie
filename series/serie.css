@@ -89,6 +89,19 @@ body {
   display: block;
 }
 
+.gallery-grid figure {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.gallery-grid figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
 .overlay {
   position: absolute;
   width: 100%;
