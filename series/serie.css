@@ -23,6 +23,8 @@ body {
 
 
 
+
+
 .banner h1 {
   font-size: 3rem;
   margin: 0;
@@ -53,6 +55,13 @@ body {
   padding: 1.5rem 1rem;
   max-width: 960px;
   margin: auto;
+}
+
+@media (max-width: 768px) {
+.content-section {
+  padding-left: 25px;
+  padding-right: 25px;
+}
 }
 
 .content-section h2 {
@@ -146,3 +155,4 @@ footer a {
   box-shadow: 0 0 30px rgba(0,0,0,0.7);
   border-radius: 4px;
 }
+
