@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>À propos – Gaël Maignan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style/main.css"/>
+
+  <style>
+
+
+    .about-container {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .about-text {
+      font-size: 1.05rem;
+      text-align: justify;
+    }
+
+    .portrait {
+      max-width: 280px;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    /* Responsive : mobile */
+    @media (max-width: 768px) {
+      .portrait {
+        max-width: 100%;
+        width: 100vw;
+      }
+    }
+
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .about-section {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+  <div class="logo">
+    <a href="index.html" style="text-decoration:none; color:inherit;">Gaël Maignan</a>
+  </div>
+
+  <button class="menu-toggle" aria-label="Menu">
+    &#9776;
+  </button>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="index.html#series">Séries</a>
+    <a href="about.html">À propos</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  </header>
+
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+  </script>
+
+  <main class="about-container">
+    <h1>À propos</h1>
+
+    <div class="about-section">
+      <img src="images/gael-maignan.jpg" alt="Portrait de Gaël Maignan" class="portrait" />
+
+      <div class="about-text">
+        <p>Je photographie la ville comme on observe un corps en mouvement. Belleville, Paris, ou ailleurs, chaque rue, chaque fissure, chaque façade raconte une histoire. Mon regard se pose sur les interstices : là où le béton respire, où la lumière casse la routine. Ingénieur urbaniste, je cherche à révéler ce que l’œil pressé ne voit plus. Mes images explorent les marges, les transitions, les détails oubliés du quotidien urbain.</p>
+
+        <br>
+
+        <p>Gaël Maignan - Artiste-Auteur<br>SIRET : 943 954 230 00018<br>Adhérent à la Maison des Artistes : 51098</p>
+      </div>
+    </div>
+    <h2>Contact</h2>
+    <p>Une question, une collaboration ou simplement un mot ? N’hésitez pas à me contacter.
+      <br>
+       <a href="mailto:contact@gael-maignan.fr">contact@gael-maignan.fr</a> | <a href="https://gael-maignan.fr/">https://gael-maignan.fr/</a>
+    </p>
+  </main>
+
+  <footer>
+    © 2025 Gaël Maignan – Tous droits réservés
+  </footer>
+
+</body>
+</html>

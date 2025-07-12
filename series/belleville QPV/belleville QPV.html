@@ -2,66 +2,145 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Belleville QPV – Quartier Priorisant la Vie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Série – Belleville QPV - Quartier Priorisant la Vie</title>
+
   <meta name="author" content="Gaël Maignan">
   <meta name="robots" content="index, follow">
-  
-  <link rel="stylesheet" href="../serie.css" />
 
   <meta name="description" content="Ce projet naît d’un désir de renverser le regard. Et si, plutôt que de réduire Belleville à un sigle administratif, on en montrait la vitalité, la richesse humaine, la créativité populaire ?">
   <meta name="keywords" content="Gaël Maignan, gael maignan, Belleville QPV, Belleville, Photo, Paris, QPV, Quartier Priorisant la Vie">
-  <link rel="shortcut icon" href="../../images/favicon.ico" type="image/png"/>
-  <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="../../images/favicon.png" type="image/png">
-  <link rel="icon" sizes="32x32" href="../../images/favicon-32.png" type="image/png">
-  <link rel="icon" sizes="96x96" href="../../images/favicon-96.png" type="image/png">
+
+  <link rel="stylesheet" href="../../style/main.css"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+
+.serie-header {
+  padding: 4rem 2rem 2rem;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.serie-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+.serie-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.serie-description {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--muted-text);
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem 2rem;
+      max-width: 840px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+    figcaption {
+      font-style: italic;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .navigation-series {
+      text-align: center;
+      margin: 4rem 0;
+    }
+
+    .navigation-series a {
+      display: inline-block;
+      margin: 0 1rem;
+      padding: 0.5rem 1.2rem;
+      border: 1px solid var(--text-color);
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .navigation-series a:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+    }
+
+  </style>
 </head>
 <body>
-  <style>
-    .banner {
-    background: url('cover.webp') center/cover no-repeat;
-  }
-  </style>
-  <header class="banner">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Belleville QPV</h1>
-      <p>Quartier Priorisant la Vie</p>
-    </div>
+
+  <header>
+  <div class="logo">
+    <a href="../../index.html" style="text-decoration:none; color:inherit;">Gaël Maignan</a>
+  </div>
+
+  <button class="menu-toggle" aria-label="Menu">
+    &#9776;
+  </button>
+
+  <nav>
+    <a href="../../index.html">Accueil</a>
+    <a href="../../index.html#series">Séries</a>
+    <a href="../../about.html">À propos</a>
+    <a href="../../contact.html">Contact</a>
+  </nav>
   </header>
 
-  <nav class="subnav">
-    <a href="#apropos">À propos</a>
-    <a href="#galerie">Galerie</a>
-    <a href="../../index.html">Accueil</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+  </script>
 
   <main>
-    <section id="apropos" class="content-section">
-      <h2>Pourquoi ce projet ?</h2>
-
-      <p>
+    <section class="serie-header">
+      <h1>Belleville QPV - Quartier Priorisant la Vie</h1>
+      <p class="serie-description">
         Les Quartiers Prioritaires de la Politique de la Ville (QPV) sont des zones définies comme ayant besoin d’un soutien renforcé en matière d’emploi, d’éducation, de sécurité ou de logement. Ces quartiers sont souvent associés à des représentations négatives, figées dans des statistiques et des clichés.
       </p>
 
-      <h3>Un autre regard : Quartier Priorisant la Vie</h3>
+      <h2>Un autre regard : Quartier Priorisant la Vie</h2>
 
-      <p>Ce projet naît d’un désir de renverser le regard. Et si, plutôt que de réduire Belleville à un sigle administratif, on en montrait la vitalité, la richesse humaine, la créativité populaire ?<br>
-Le jeu de mots « Quartier Priorisant la Vie » transforme une étiquette technocratique en une promesse vivante. Il suggère un lieu où l’on résiste, où l’on invente, où l’on échange, où l’on vit, tout simplement.</p>
+      <p class="serie-description">Ce projet naît d’un désir de renverser le regard. Et si, plutôt que de réduire Belleville à un sigle administratif, on en montrait la vitalité, la richesse humaine, la créativité populaire ?<br>
+Le jeu de mots « Quartier Priorisant la Vie » transforme une étiquette technocratique en une promesse vivante. Il suggère un lieu où l’on résiste, où l’on invente, où l’on échange, où l’on vit, tout simplement.
 
-      <h3>Une démarche artistique et sociale</h3>
-
-      <p>Ce projet mêle photographie documentaire et approche sensible. Il donne à voir, mais aussi à entendre et à lire. Certains clichés sont accompagnés d’un court texte : un prénom, une anecdote, une phrase prononcée au coin d’un comptoir.<br>
-L’objectif : rendre visibles les invisibles, raconter un quartier autrement, et participer à déconstruire les préjugés sur les QPV.</p>
-
+</p>
     </section>
 
-    <section id="galerie" class="content-section">
-      <h2>Galerie</h2>
-      <div class="gallery-grid">
-        <figure><img src="images/1.jpg" alt="Photographie 1 - Gaël Maignan" onclick="openLightbox(this)" /><figcaption>Av. Simon Bolivar</figcaption></figure>
+    <section class="gallery">
+      <figure><img src="images/1.jpg" alt="Photographie 1 - Gaël Maignan" onclick="openLightbox(this)" /><figcaption>Av. Simon Bolivar</figcaption></figure>
         <figure><img src="images/2.jpg" alt="Photographie 2 - Gaël Maignan" onclick="openLightbox(this)" /><figcaption>88 Rue Rebeval</figcaption></figure>
         <figure><img src="images/10.jpg" alt="Photographie 10 - Gaël Maignan" onclick="openLightbox(this)" /><figcaption>Ben - « Il faut se méfier des mots »</figcaption></figure>
         <figure><img src="images/3.jpg" alt="Photographie 3 - Gaël Maignan" onclick="openLightbox(this)" /><figcaption>Rue de Belleville</figcaption></figure>
@@ -74,56 +153,17 @@ L’objectif : rendre visibles les invisibles, raconter un quartier autrement, e
         <figure><img src="images/11.jpg" alt="Photographie 11 - Gaël Maignan" onclick="openLightbox(this)" /><figcaption>Rue de Belleville</figcaption></figure>
         <figure><img src="images/12.jpg" alt="Photographie 12 - Gaël Maignan" onclick="openLightbox(this)" /><figcaption>Rue Pradier</figcaption></figure>
         <figure><img src="images/7.jpg" alt="Photographie 7 - Gaël Maignan" onclick="openLightbox(this)" /><figcaption>Rue de Belleville</figcaption></figure>
-      </div>
-
-       <div class="cta"><a href="../../index.html">Retour à l'accueil</a></div>
-
-
-
     </section>
 
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" src="" alt="Image en plein écran" />
-</div>
-
-<script>
-  function openLightbox(img) {
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    lightboxImg.src = img.src;
-    lightbox.style.display = "flex";
-  }
-
-  function closeLightbox() {
-    const lightbox = document.getElementById("lightbox");
-    lightbox.style.display = "none";
-  }
-</script>
-
-<section id="about" class="content-section">
-       <h2>À propos de ma démarche</h2>
-      <p>Étudiant en urbanisme à l’EIVP, située en plein cœur de Belleville, je côtoie ce quartier au quotidien. C’est à la fois mon lieu d’étude, mon terrain de réflexion et ma source d’inspiration.<br>
-Ce projet photographique est né à l’intersection de deux regards : celui de l’urbaniste en formation, attentif aux dynamiques sociales et territoriales, et celui du photographe, sensible aux récits que tissent les visages, les gestes et les lieux.</p>
-
-<p>Ce projet, en somme, est une cartographie sensible du quartier. Un récit parallèle, plus incarné, que celui que l’on retrouve dans les documents d’étude.<br>
-C’est aussi une manière pour moi de réconcilier pratique artistique et formation technique, en affirmant que la ville ne se comprend jamais aussi bien qu’en la traversant à hauteur d’humain.</p>
-
-
-    </section>
-
-
-    <section id="contact" class="content-section">
-      <h2>Contact</h2>
-      <h3>Vous vivez ou travaillez à Belleville ?</h3>
-      <p>Vous êtes habitant·e, commerçant·e, passant régulier ou mémoire vivante du quartier ?<br>
-Vous avez envie de partager une anecdote, un souvenir, une parole, ou même de poser pour un portrait ?</p>
-
-      <div class="cta"><a href="mailto:contact@gael-maignan.fr">M'envoyer un mail</a></div>
-    </section>
+    <div class="navigation-series">
+      <a href="#">Série précédente</a>
+      <a href="../ce que la ville murmure/ce que la ville murmure.html">Série suivante</a>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Gaël Maignan – Photographie</p>
+    © 2025 Gaël Maignan – Tous droits réservés
   </footer>
+
 </body>
 </html>
