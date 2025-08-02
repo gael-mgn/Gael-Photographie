@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paris Sauvage – Série photographique</title>
+  <meta name="author" content="Gaël Maignan">
+  <meta name="robots" content="index, follow">
+  
+  <link rel="stylesheet" href="../serie.css" />
+
+  <meta name="description" content="Comme tout Parisien, c’est d'un quai de métro que je proclame, ma proximité avec la nature, celle qui passe en éclairs entre deux rames, ou se devine dans un souffle d’air tiède sous les néons.">
+  <meta name="keywords" content="Gaël Maignan, gael maignan, Paris Sauvage, Photographe, Photo, Paris">
+  <link rel="shortcut icon" href="../../images/favicon.ico" type="image/png"/>
+  <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../../images/favicon.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="../../images/favicon-32.png" type="image/png">
+  <link rel="icon" sizes="96x96" href="../../images/favicon-96.png" type="image/png">
+
+  <script type="module" src="https://gael-mgn.github.io/js/log.js"></script>
+</head>
+<body>
+  <style>
+    .banner {
+    background: url('cover.webp') center/cover no-repeat;
+  }
+  </style>
+  <header class="banner">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Paris Sauvage</h1>
+      <p>Un peu de nature.</p>
+    </div>
+  </header>
+
+  <nav class="subnav">
+    <a href="#apropos">À propos</a>
+    <a href="#galerie">Galerie</a>
+    <a href="../../index.html">Accueil</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="apropos" class="content-section">
+      <h2>À propos</h2>
+      <p>
+        Comme tout Parisien, c’est d'un quai de métro que je proclame, ma proximité avec la nature, celle qui passe en éclairs entre deux rames, ou se devine dans un souffle d’air tiède sous les néons.
+      </p>
+    </section>
+
+    <section id="galerie" class="content-section">
+      <h2>Galerie</h2>
+      <div class="gallery-grid">
+        <img src="images/1.jpg" alt="Photographie 1 - Gaël Maignan" onclick="openLightbox(this)" />
+        <img src="images/2.jpg" alt="Photographie 2 - Gaël Maignan" onclick="openLightbox(this)" />
+      </div>
+
+       <div class="cta"><a href="../../index.html">Retour à l'accueil</a></div>
+      
+    </section>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Image en plein écran" />
+</div>
+
+<script>
+  function openLightbox(img) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    lightboxImg.src = img.src;
+    lightbox.style.display = "flex";
+  }
+
+  function closeLightbox() {
+    const lightbox = document.getElementById("lightbox");
+    lightbox.style.display = "none";
+  }
+</script>
+
+    <section id="contact" class="content-section">
+      <h2>Contact</h2>
+      <p>Que ce soit pour une collaboration, une commande ou simplement échanger, je serai ravi de vous lire. Vous pouvez me joindre directement par mail à l'adresse : contact@gael-maignan.fr</p>
+
+      <div class="cta"><a href="mailto:contact@gael-maignan.fr">M'envoyer un mail</a></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gaël Maignan – Photographie</p>
+  </footer>
+</body>
+</html>
