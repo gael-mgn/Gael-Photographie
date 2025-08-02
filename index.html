@@ -2,109 +2,172 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gaël Maignan - Photographe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaël Maignan – Photographie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
   <meta name="author" content="Gaël Maignan">
   <meta name="robots" content="index, follow">
 
-  <link rel="stylesheet" href="styles.css" />
+  <meta property="og:image" content="https://gael-maignan-photographe.fr/images/cover.webp">
 
   <meta name="description" content="Gaël Maignan — Photographe des pavés et des regards qui s’éclipsent">
   <meta name="keywords" content="Gaël Maignan, gael maignan, Artiste, Photographe, Photo, Auteur">
-
+  
+  <link rel="stylesheet" href="style/main.css"/>
 
   <link rel="shortcut icon" href="images/favicon.ico" type="image/png"/>
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="icon" href="../../images/favicon.png" type="image/png">
   <link rel="icon" sizes="32x32" href="images/favicon-32.png" type="image/png">
   <link rel="icon" sizes="96x96" href="images/favicon-96.png" type="image/png">
 
+  <script src="https://gael-mgn.github.io/tools/reveal.js"></script>
   <script type="module" src="https://gael-mgn.github.io/js/log.js"></script>
+
+
+  <style>
+    
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+
+    .hero p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #444;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem 2rem;
+    }
+
+    .series {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .series img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .series:hover img {
+      transform: scale(1.05);
+    }
+
+    .series-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      background: var(--hover-overlay);
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .series-title-mobile {
+  display: none;
+  margin-top: 0.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  text-align: center;
+  color: #222;
+}
+
+/* Afficher uniquement sur écran de moins de 768px */
+@media screen and (max-width: 768px) {
+  .series-title {
+    display: none; /* Ne pas afficher le titre au survol sur mobile */
+  }
+
+  .series-title-mobile {
+    display: block;
+  }
+}
+
+
+    .series:hover .series-title {
+      opacity: 1;
+    }
+  </style>
 
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay"></div>
-    <!-- NAVIGATION -->
-<nav class="nav">
-  <h1 class="logo">Gaël Maignan</h1>
-  <div class="menu-toggle" id="menu-toggle">☰</div>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#about">À propos</a></li>
-    <li><a href="#series">Séries</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
 
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-  });
-</script>
-    <div class="hero-content">
-      <p>Gaël M. — Photographe des pavés et des regards qui s’éclipsent</p>
-    </div>
+  <header>
+  <div class="logo">
+    <a href="#" style="text-decoration:none; color:inherit;">Gaël Maignan</a>
+  </div>
+
+  <button class="menu-toggle" aria-label="Menu">
+    &#9776;
+  </button>
+
+  <nav>
+    <a href="#">Accueil</a>
+    <a href="#series">Séries</a>
+    <a href="about.html">À propos</a>
+    <a href="contact.html">Contact</a>
+  </nav>
   </header>
 
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
 
-  <section class="content" id="series">
-    <h2>Séries</h2>
-  <section class="series">
-  <div class="series-item">
-    <img src="images/urbain.webp" alt="Photographie illustrant la série Paris Belleville, par Gaël Maignan" />
-    <h2>Belleville QPV — Quartier Priorisant la Vie</h2>
-    <p>Et si on en montrait la vitalité, la richesse humaine, la créativité populaire de Belleville ?</p>
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+  </script>
 
-    <div class="cta">
-    <a href="series/belleville QPV/belleville QPV.html">Voir les photos</a>
-  </div>
-  </div>
-  <div class="series-item">
-    <img src="images/vegetal.webp" alt="Photographie illustrant la série Paris Sauvage, par Gaël Maignan" />
-    <h2>Paris Sauvage</h2>
-    <p>La nature parisienne saisie dans sa discrétion et sa puissance fragile.</p>
 
-    <div class="cta"><a href="series/paris sauvage/serie.html">Voir les photos</a></div>
-  </div>
-</section>
-</section>
-<section class="content" id="about">
-    <h2>À propos</h2>
-    <p class="paragraphe">Je photographie la ville comme on observe un corps en mouvement. Belleville, Paris, ou ailleurs, chaque rue, chaque fissure, chaque façade raconte une histoire. Mon regard se pose sur les interstices : là où le béton respire, où la lumière casse la routine. Ingénieur urbaniste, je cherche à révéler ce que l’œil pressé ne voit plus. Mes images explorent les marges, les transitions, les détails oubliés du quotidien urbain.</p>
+  <section class="hero">
+    <h1 class="reveal">Gaël Maignan — Photographies en séries</h1>
+    <p>Photographe des pavés et des regards qui s’éclipsent</p>
   </section>
 
+  <section class="gallery" id="series">
+    <a href="series/belleville QPV/belleville QPV.html" class="series">
+      <img src="images/belleville-QPV-serie1-gael-maignan.webp" alt="Série 1 - Belleville QPV">
+      <div class="series-title">Belleville QPV — Quartier Priorisant la Vie</div>
+      <div class="series-title-mobile">Belleville QPV — Quartier Priorisant la Vie</div>
+    </a>
+    <a href="series/ce que la ville murmure/ce que la ville murmure.html" class="series">
+      <img src="images/ce-que-la-ville-murmure-gael-maignan.webp" alt="Série 2 - Ce que la Ville murmure">
+      <div class="series-title">Ce que la Ville murmure</div>
+      <div class="series-title-mobile">Ce que la Ville murmure</div>
+    </a>
+    <a href="series/douce provence/douce provence.html" class="series">
+      <img src="images/douce-provence-serie3-gael-maignan.webp" alt="Série 3 - Douce Provence">
+      <div class="series-title">Douce Provence</div>
+      <div class="series-title-mobile">Douce Provence</div>
+    </a>
 
-
-  <section class="content" id="contact">
-    <h2>Contact</h2>
-    <p class="paragraphe">Que ce soit pour une collaboration, une commande ou simplement échanger, je serai ravi de vous lire. Vous pouvez me joindre directement par mail à l'adresse : contact@gael-maignan.fr</p>
-
-    <div class="cta"><a href="mailto:contact@gael-maignan.fr">M'envoyer un mail</a></div>
-
-    <style type="text/css">
-      .gael {
-        width: 90%;
-        max-width: 300px;
-        margin: auto;
-      }
-    </style>
-
+    <!--
+    <a href="serie3.html" class="series">
+      <img src="images/serie3.jpg" alt="Série 3">
+      <div class="series-title">Silences Habités</div>
+    </a>-->
+    <!-- Ajoute d'autres séries ici -->
   </section>
 
-<section class="content">
-  <img class="gael" src="images/gael-maignan.jpg" alt="Photo de Gaël Maignan - Artiste Auteur et Photographe, le samedi 21 juin à Paris, Par Caroline Buquet.">
-  <p>Gaël Maignan - Artiste-Auteur</p>
-  <p>SIRET : 943 954 230 00018</p>
-  <p>Adhérent à la Maison des Artistes : <a href="https://www.artistescontemporains.org/artistes/51098/" target="_blank">51098</a></p>
-</section>
-
-  <footer class="footer">
-    <a href="#about">À propos</a>
-    <a href="#series">Séries</a>
-    <a href="#contact">Contact</a>
-    <a href="#">Mentions légales</a>
+  <footer>
+    © 2025 Gaël Maignan – Tous droits réservés
   </footer>
+
 </body>
 </html>
